@@ -8,10 +8,7 @@ async function run (input, output, opts = { }) {
   expect(result.warnings()).toHaveLength(0)
 }
 
-/* Write tests here
-
-it('does something', async () => {
-  await run('a{ }', 'a{ }', { })
-})
-
-*/
+it('adds the import line on the CSS', async () => {
+  const sampleUrl = "https://fonts.googleapis.com/css?family=Nunito+Sans";
+  await run('', `@import "${sampleUrl}"`, { urls: [sampleUrl] })
+});
