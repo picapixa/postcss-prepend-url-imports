@@ -8,7 +8,7 @@ module.exports = postcss.plugin<PrependImportUrlOptions>("prepend-import-urls", 
   return (css) => {
     if (opts?.urls) {
       opts.urls.forEach(url => {
-        css.prepend(`@import "${url}";`);
+        css.prepend(`@import url("${url}");`);
       });
     }
   };

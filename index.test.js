@@ -10,5 +10,5 @@ async function run (input, output, opts = { }) {
 
 it('adds the import line on the CSS', async () => {
   const sampleUrl = "https://fonts.googleapis.com/css?family=Nunito+Sans";
-  await run('', `@import "${sampleUrl}"`, { urls: [sampleUrl] })
+  await run('', `@import url("${sampleUrl}")`, { urls: [sampleUrl] })
 });
