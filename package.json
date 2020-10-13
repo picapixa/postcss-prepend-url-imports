@@ -1,6 +1,6 @@
 {
   "name": "postcss-prepend-url-imports",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "PostCSS plugin that prepends URL imports at the beginning of a stylesheet.",
   "keywords": [
     "postcss",
@@ -10,6 +10,8 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test",
     "test": "jest-ci --coverage && eslint-ci ."
   },
   "author": "Raffy Alcoriza <opensource@raffyal.co>",
